@@ -1,0 +1,411 @@
+@font-face {
+  font-family: Inter;
+  src: url(font/Inter_18pt-Bold.ttf);
+}
+@font-face {
+  font-family: Georama;
+  src: url(font/Georama_Condensed-Regular.ttf);
+}
+
+body {
+  background-color: #14161b;
+  font-family: Inter, sans-serif;
+  color: #b7b7b7;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #14161b;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #6d6d6d; 
+}
+
+/* Main Navbar Styling */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #14161b; /* Dark background color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Brand/Title Styling */
+.navbar-brand h1 {
+  color: #f1f1f1; /* Light color for brand title */
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Centered Links */
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar-links a {
+  color: #b0b3b8; /* Subtle grey for links */
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #8cfbfc; /* Soft, elegant hover effect */
+}
+
+.navbar-links .active {
+  color: #8cfbfc;
+  /* border-bottom: 2px solid #8cfbfc; */
+}
+
+/* Right Icons/Links */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-right a {
+  color: #b0b3b8;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+  color: #8cfbfc;
+}
+
+/* Divider between right links */
+.navbar-right .divider {
+  width: 1px;
+  height: 20px;
+  background-color: #333;
+}
+
+/* Search Icon Styling */
+.search-icon i {
+  font-size: 18px;
+  color: #b0b3b8;
+  transition: color 0.3s ease;
+}
+
+.search-icon:hover i {
+  color: #8cfbfc;
+}
+
+.container {
+  position: relative;
+  text-align: left;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.container-title {
+  text-transform: uppercase;
+  color: white;
+  font-family: Georama, sans-serif;
+  font-size: 100px;
+  letter-spacing: 1px;
+  margin-top: 48px;
+  margin-bottom: 0px;
+}
+
+.centered {
+  position: absolute;
+  top: 12%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+}
+
+.gradient-img {
+  width: 100%;
+  height: 110vh;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+p {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-title {
+    font-size: 48px;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-title {
+    font-size: 36px;
+  }
+  .navbar-nav a {
+    padding: 8px 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+.button-top {
+  --border: 5px; /* the border width */
+  --slant: 0.7em; /* control the slanted corners */
+  --color: #3c3d37; /* the color */
+
+  font-size: 16px;
+  margin-top: 18px;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color);
+  background: linear-gradient(to bottom left, var(--color) 50%, #0000 50.1%) top
+      right,
+    linear-gradient(to top right, var(--color) 50%, #0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3 * var(--border))
+    calc(var(--slant) + 1.3 * var(--border));
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0 200px inset var(--s, #0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--slant)) 0,
+    100% var(--slant),
+    100% 100%,
+    var(--slant) 100%,
+    0 calc(100% - var(--slant))
+  );
+  transition: color var(--t, 0.3s), background-size 0.3s;
+}
+.button-top:focus-visible {
+  outline-offset: calc(-1 * var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+.button-top:hover,
+.button-top:active {
+  background-size: 100% 100%;
+  color: gray;
+  --t: 0.2s 0.1s;
+}
+.button-top:active {
+  --s: #0005;
+  transition: none;
+}
+
+.car-logo-container {
+  margin-top: 50px;
+}
+.car-logo-image {
+  width: 128px;
+  height: 128px;
+}
+
+.container-img {
+  display: flex;
+  gap: 30px; /* Increased gap between left and right sections */
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Large Box on the Left */
+.large-image-box {
+  width: 700px; /* Further increased width */
+  height: 420px; /* Further increased height */
+  overflow: hidden;
+  border-radius: 20px; /* Increased border radius for a smoother look */
+}
+
+.large-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Right Box with 2x2 Grid */
+.right-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px; /* Increased gap between small images */
+}
+
+/* Even Larger Size for Each Small Box */
+.small-box {
+  overflow: hidden;
+  border-radius: 15px; /* Increased border radius for smoother corners */
+}
+
+.small-image-box-1,
+.small-image-box-2,
+.small-image-box-3,
+.small-image-box-4 {
+  width: 300px; /* Increased width */
+  height: 200px; /* Increased height */
+}
+
+.small-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 80vw; /* Adjust as needed */
+  max-width: 800px;
+  text-align: center;
+
+  /* Center the container */
+  margin: 0 auto; /* Centers horizontally */
+  justify-content: center;
+}
+
+.car-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car-image {
+  width: 600px;
+  height: auto;
+  max-width: 2048px; /* Ensures the image doesn't exceed a certain size */
+}
+
+.order-button {
+  padding: 10px 20px;
+  margin-top: 24px;
+  border: 1px solid whitesmoke; /* Thinner border */
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 400; /* Lighter font weight */
+  font-size: 16px; /* Adjust to match the font size in your image */
+  font-family: Arial, sans-serif; /* Use a font similar to the image */
+  color: white;
+  cursor: pointer;
+  letter-spacing: 2px; /* Adds spacing between letters */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.order-button:hover {
+  background-color: gray;
+  color: white;
+}
+
+/* Container styling */
+.container-parent-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card container styling */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 9000px;
+  width: 100%;
+}
+
+/* Card styling */
+.card {
+  position: relative;
+  width: 630px; /* Fixed width for better display */
+  height: 300px; /* Fixed height for better display */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background 0.3s;
+}
+.card:hover .card-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Text styling */
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 10;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+/* Arrow styling */
+.card-arrow {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.5em;
+  color: white;
+  transition: transform 0.3s;
+}
+.card:hover .card-arrow {
+  transform: translateX(5px);
+}
+
+.sub-title {
+  margin-left: 85px;
+}
+
