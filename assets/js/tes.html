@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function validateForm(event) {
+            // Prevent form submission
+            event.preventDefault();
+
+            // Get the input field
+            const inputField = document.getElementById("inputField").value.trim();
+
+            // Check if the input is null or empty
+            if (inputField === "") {
+                alert("The input field cannot be empty.");
+            } else {
+                alert("Form submitted successfully!");
+                // Optionally submit the form if validation passes
+                // event.target.submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="validateForm(event)">
+        <label for="inputField">Enter something:</label>
+        <input type="text" id="inputField" name="inputField">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+b  

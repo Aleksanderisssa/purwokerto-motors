@@ -26,7 +26,7 @@ body {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: #6d6d6d; 
+  background: #6d6d6d;
 }
 
 /* Main Navbar Styling */
@@ -409,3 +409,31 @@ p {
   margin-left: 85px;
 }
 
+.footer {
+  background-color: black;
+  color: #14161b;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #007bff;
+  transition: background-color 2s ease-out 100ms;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ahover:hover {
+  color: #449dfc;
+}
