@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Continental Garage</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="scrollanim.js"></script>
     <script src="https://kit.fontawesome.com/c1cbeb7f83.js" crossorigin="anonymous"></script>
 </head>
@@ -18,22 +18,21 @@
         </div>
 
         <div class="navbar-links">
-            <a href="#" class="active">Home</a>
-            <a href="#">Build & Price</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="buildandprice.html">Build & Price</a>
             <a href="cargear.html">Car Gear</a>
-            <a href="#">Gallery</a>
+            <a href="gallery.html">Gallery</a>
         </div>
 
         <div class="navbar-right">
-            <!-- <i class="fas fa-shopping-cart"></i>
-            <span class="divider"></span> -->
-            <i></i>
-            <i></i>
-            <div>
-                <a href="#">Register</a><span style="font-weight: bold;">/</span><a href="#">Login</a>
-            </div>
+            <a href="#" class="search-icon" aria-label="Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <span class="divider" aria-hidden="true"></span>
+            <a href="login.html" aria-label="Login" id="loginusername"></a>
         </div>
     </nav>
+
 
     <div class="container">
         <img src="https://vf-architectures.com/wp-content/uploads/2023/09/luxury-private-garage-vielliard-francheteau-architect-1.jpg   "
@@ -41,53 +40,54 @@
         <div class="centered">
             <h1 class="container-title">Continental Garage</h1>
             <p>─ Find your best used car here! - Low Price, <span
-                    style="background-color: #8CFBFC; padding: 1px 10px 1px 10px; border-radius: 5px; color: gray;">High
+                    style="background-color: #ff4c60; padding: 1px 10px 1px 10px; border-radius: 5px; color: white;">High
                     Quality</span></p>
-            <button class="button-top" style="--color:#FFFFFF;--border:2px;--slant:.5em"><i class="fa-solid fa-car"></i>
-                BUY CAR</button>
+            <button class="button-top" style="--color:#FFFFFF;--border:2px;--slant:.5em"><a
+                    style="text-decoration: none; color: inherit;" href="#dreamcar"> <i class="fa-solid fa-car"></i>
+                    BUY CAR</a></button>
         </div>
 
-        <h1 class="sub-title">PICK YOUR <a style="color: #ff0000d8;">DREAM CAR</a></h1>
+        <h1 id="dreamcar" class="sub-title">PICK YOUR <a style="color: #FF4C60;">DREAM CAR</a></h1>
         <div class="grid-container">
             <!-- Car 1 -->
             <div class="car-item">
-                <img src="shittybro.png" alt="Car 718" class="car-image">
-                <button class="order-button">Order 718</button>
+                <img src="assets/img/bugatti.png" alt="Car bugatti" class="car-image">
+                <button class="order-button">Order Bugatti</button>
             </div>
 
             <!-- Car 2 -->
             <div class="car-item">
-                <img src="shittybro.png" alt="Car Taycan" class="car-image">
-                <button class="order-button">Order Taycan</button>
+                <img src="assets/img/bmw.png" alt="Car bmw" class="car-image">
+                <button class="order-button">Order BMW</button>
             </div>
 
             <!-- Car 3 -->
             <div class="car-item">
-                <img src="shittybro.png" alt="Car 911" class="car-image">
+                <img src="assets/img/porsche.png" alt="Car porsche" class="car-image">
                 <button class="order-button">Order 911</button>
             </div>
 
             <!-- Car 4 -->
             <div class="car-item">
-                <img src="shittybro.png" alt="Car Macan" class="car-image">
+                <img src="assets/img/ford.png" alt="Car ford" class="car-image">
                 <button class="order-button">Order Macan</button>
             </div>
         </div>
-        <h1 class="sub-title" style="margin-top: 60px;">CARS IN STOCK</h1>
+        <h1 class="sub-title" style="margin-top: 60px;">LET'S DO A MAGIC</h1>
         <div class="container-parent-card">
             <div class="card-container">
 
                 <!-- Card 1: Latest Models -->
-                <div class="card">
-                    <img src="https://via.placeholder.com/600x400" alt="Latest Models">
+                <div class="card" id="cargear">
+                    <img src="https://bimmers.com/wp-content/uploads/2022/03/bmw-n74-engine-overview-thumbnail.jpeg" alt="Latest Models">
                     <div class="card-overlay"></div>
-                    <div class="card-content">Find Latest Models</div>
+                    <div class="card-content">Buy Gear</div>
                     <div class="card-arrow">&rarr;</div>
                 </div>
 
                 <!-- Card 2: Old Models -->
-                <div class="card">
-                    <img src="https://via.placeholder.com/600x400" alt="Old Models">
+                <div class="card" id="buildandprice">
+                    <img src="https://asset.kompas.com/crops/rkxPC6vyShHnXo3i5OSmtPApjcM=/13x0:4500x2991/1200x800/data/photo/2019/11/12/5dca877c57741.jpg" alt="Old Models">
                     <div class="card-overlay"></div>
                     <div class="card-content">Find Old Models</div>
                     <div class="card-arrow">&rarr;</div>
@@ -96,7 +96,7 @@
             </div>
         </div>
         <h1 style="margin-top: 80px; text-transform: uppercase; text-align: center;">Craving a Spin? Let's Take You for
-            a <span style="color:red;">TEST DRIVE</span></h1>
+            a <span style="color:#FF4C60;">TEST DRIVE</span></h1>
         <div style="text-align: center; justify-content: center;">
             <button class="order-button" style="margin-bottom: 60px;">SCHEDULE TEST DRIVE</button>
         </div>
@@ -112,8 +112,14 @@
             </p>
         </div>
     </footer>
-    <script>
 
+    <script>
+        document.getElementById('cargear').addEventListener('click', function() {
+            window.location.href = 'cargear.html';
+        });
+        document.getElementById('buildandprice').addEventListener('click', function() {
+            window.location.href = 'buildandprice.html';
+        });
     </script>
 </body>
 
