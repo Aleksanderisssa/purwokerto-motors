@@ -29,29 +29,29 @@ body {
   background: #6d6d6d;
 }
 
-/* General Navbar */
+
 .navbar-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
-  background-color: #0b0c0f; /* Dark background color */
+  background-color: #0b0c0f;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  position: sticky; /* Ensures the navbar sticks to the top */
-  top: 0; /* Sticks the navbar to the top of the viewport */
-  z-index: 10; /* Ensures the navbar stays on top of other elements */
+  position: sticky;
+  top: 0;
+  z-index: 10;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-  height: 48px; /* Adjust height for better appearance */
+  height: 48px;
 }
 
-/* Brand/Title Styling */
+
 .navbar-brand {
   position: absolute;
-  left: 30px; /* Position brand/logo on the left */
+  left: 30px;
 }
 
 .navbar-brand h1 {
-  color: #f1f1f1; /* Light color for brand title */
+  color: #f1f1f1;
   font-family: "Inter", sans-serif;
   font-size: 1.8rem;
   margin: 0;
@@ -59,17 +59,17 @@ body {
   letter-spacing: 1.2px;
 }
 
-/* Centered Links */
+
 .navbar-links {
   display: flex;
   gap: 25px;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Center the links horizontally */
+  transform: translateX(-50%);
 }
 
 .navbar-links a {
-  color: #b0b3b8; /* Subtle grey for links */
+  color: #b0b3b8;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -80,21 +80,21 @@ body {
 }
 
 .navbar-links a:hover {
-  color: #ff4c60; /* Highlight on hover */
+  color: #ff4c60;
 }
 
 .navbar-links .active {
   color: #ff4c60;
-  border-bottom: 2px solid #ff4c60; /* Active state indicator */
+  border-bottom: 2px solid #ff4c60;
 }
 
-/* Right Icons/Links */
+
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 15px;
   position: absolute;
-  right: 30px; /* Position right elements */
+  right: 30px;
 }
 
 .navbar-right a {
@@ -110,17 +110,17 @@ body {
 
 .navbar-right a:hover {
   color: #ff4c60;
-  /* background-color: #8cfbfc; */
+ 
 }
 
-/* Divider between right links */
+
 .navbar-right .divider {
   width: 1px;
   height: 20px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Search Icon Styling */
+
 .search-icon i {
   font-size: 20px;
   color: #b0b3b8;
@@ -132,7 +132,7 @@ body {
   transform: scale(0.9);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .navbar-nav {
     flex-direction: column;
@@ -202,7 +202,7 @@ p {
   font-size: 20px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .container-title {
     font-size: 48px;
@@ -219,14 +219,14 @@ p {
     font-size: 36px;
   }
   .navbar-nav a {
-    padding: 8px 10px; /* Adjust padding for smaller screens */
+    padding: 8px 10px;
   }
 }
 
 .button-top {
-  --border: 5px; /* the border width */
-  --slant: 0.7em; /* control the slanted corners */
-  --color: #3c3d37; /* the color */
+  --border: 5px;
+  --slant: 0.7em;
+  --color: #3c3d37;
 
   font-size: 16px;
   margin-top: 18px;
@@ -280,17 +280,17 @@ p {
 
 .container-img {
   display: flex;
-  gap: 30px; /* Increased gap between left and right sections */
+  gap: 30px;
   padding: 20px;
   justify-content: center;
 }
 
-/* Large Box on the Left */
+
 .large-image-box {
-  width: 700px; /* Further increased width */
-  height: 420px; /* Further increased height */
+  width: 700px;
+  height: 420px;
   overflow: hidden;
-  border-radius: 20px; /* Increased border radius for a smoother look */
+  border-radius: 20px;
 }
 
 .large-image-box img {
@@ -300,25 +300,25 @@ p {
   border-radius: inherit;
 }
 
-/* Right Box with 2x2 Grid */
+
 .right-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px; /* Increased gap between small images */
+  grid-gap: 20px;
 }
 
-/* Even Larger Size for Each Small Box */
+
 .small-box {
   overflow: hidden;
-  border-radius: 15px; /* Increased border radius for smoother corners */
+  border-radius: 15px;
 }
 
 .small-image-box-1,
 .small-image-box-2,
 .small-image-box-3,
 .small-image-box-4 {
-  width: 300px; /* Increased width */
-  height: 200px; /* Increased height */
+  width: 300px;
+  height: 200px;
 }
 
 .small-box img {
@@ -332,12 +332,12 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  width: 80vw; /* Adjust as needed */
+  width: 80vw;
   max-width: 800px;
   text-align: center;
 
-  /* Center the container */
-  margin: 0 auto; /* Centers horizontally */
+ 
+  margin: 0 auto;
   justify-content: center;
 }
 
@@ -351,21 +351,21 @@ p {
   object-fit: contain;
   width: 600px;
   height: 300px;
-  max-width: 2048px; /* Ensures the image doesn't exceed a certain size */
+  max-width: 2048px;
 }
 
 .order-button {
   padding: 10px 20px;
   margin-top: 24px;
-  border: 1px solid whitesmoke; /* Thinner border */
+  border: 1px solid whitesmoke;
   background-color: transparent;
   text-transform: uppercase;
-  font-weight: 400; /* Lighter font weight */
-  font-size: 16px; /* Adjust to match the font size in your image */
-  font-family: Arial, sans-serif; /* Use a font similar to the image */
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
   color: white;
   cursor: pointer;
-  letter-spacing: 2px; /* Adds spacing between letters */
+  letter-spacing: 2px;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -374,14 +374,14 @@ p {
   color: white;
 }
 
-/* Container styling */
+
 .container-parent-card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Card container styling */
+
 .card-container {
   display: flex;
   justify-content: center;
@@ -391,11 +391,11 @@ p {
   width: 100%;
 }
 
-/* Card styling */
+
 .card {
   position: relative;
-  width: 630px; /* Fixed width for better display */
-  height: 300px; /* Fixed height for better display */
+  width: 630px;
+  height: 300px;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -411,7 +411,7 @@ p {
   object-fit: cover;
 }
 
-/* Overlay */
+
 .card-overlay {
   position: absolute;
   top: 0;
@@ -425,7 +425,7 @@ p {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* Text styling */
+
 .card-content {
   position: absolute;
   bottom: 20px;
@@ -436,7 +436,7 @@ p {
   font-weight: 600;
 }
 
-/* Arrow styling */
+
 .card-arrow {
   position: absolute;
   bottom: 20px;
@@ -464,7 +464,7 @@ ul {
   margin: 0;
 }
 
-/* Footer Styles */
+
 .footer {
   background-color: #0b0c0f;
   color: #ffffff;
@@ -543,7 +543,7 @@ address {
   margin: 0;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr;
@@ -558,7 +558,7 @@ address {
   color: #449dfc;
 }
 
-/* Titles */
+
 .main-title {
   text-align: center;
   font-size: 36px;
@@ -578,7 +578,7 @@ address {
   margin-bottom: 40px;
 }
 
-/* Card Container */
+
 .card-gears-container {
   margin-left: 100px;
   margin-right: 100px;
@@ -588,7 +588,7 @@ address {
   padding: 10px;
 }
 
-/* Individual Card */
+
 .card-gears {
   background-color: #24272e;
   border-radius: 12px;
@@ -604,14 +604,14 @@ address {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Card Image */
+
 .card-gears-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-/* Card Content */
+
 .card-gears-content {
   padding: 20px;
   display: flex;
@@ -632,7 +632,7 @@ address {
   margin-bottom: 20px;
 }
 
-/* Card Footer */
+
 .card-gears-footer {
   display: flex;
   justify-content: space-between;
@@ -645,7 +645,7 @@ address {
   color: #ffd700;
 }
 
-/* Button Styles */
+
 .card-gears-button {
   background-color: #ff4c60;
   color: #ffffff;
@@ -663,7 +663,7 @@ address {
   transform: scale(1.05);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .main-title {
     font-size: 28px;
@@ -811,7 +811,7 @@ address {
 
 .input-with-icon input {
   width: 345px;
-  padding: 10px 15px 10px 40px; /* Add padding to make space for the icon */
+  padding: 10px 15px 10px 40px; 
   background: #1e2229;
   border: none;
   border-radius: 8px;
@@ -886,64 +886,12 @@ input::-webkit-inner-spin-button {
   transform: scale(1.2);
 }
 
-.contact-form-container {
-  background: #14161b;
-  padding: 20px;
-  display: flex;
-  margin: 30px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  width: 512px;
-}
-.contact-form-container h1 {
-  text-align: center;
-  color: #e0e0e0;
-  margin-bottom: 20px;
-}
-.form-group {
-  margin-bottom: 15px;
-}
-.contact-form-container label {
-  display: block;
-  margin-bottom: 5px;
-  color: #b0b0b0;
-}
-.contact-form-container input,
-select,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #333;
-  background: #1a1c20;
-  color: #e0e0e0;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-.contact-form-container button {
-  width: 100%;
-  padding: 10px;
-  background-color: #14161b;
-  color: #e0e0e0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-button:hover {
-  background-color: #2a2d34;
-}
-button i {
-  margin-right: 5px;
-}
-i {
-  margin-right: 8px;
-}
-
 .car-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid fleksibel */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  );
   gap: 20px;
   padding: 20px;
   background-color: #14161b;
@@ -1009,4 +957,77 @@ i {
 .car-btn:hover {
   background-color: #3e89f7;
   color: #ffffff;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #1c1f25;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3e89f7; 
+}
+
+.contact-form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.contact-form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #2a2d34;
+  color: #fff;
+}
+.contact-form-group input,
+.contact-form-group textarea {
+  width: 95%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #2a2d34;
+  color: #fff;
+}
+
+.contact-form-group input::placeholder,
+.contact-form-group textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3e89f7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+  background-color: #336dbf;
 }
