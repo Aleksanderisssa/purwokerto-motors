@@ -18,13 +18,13 @@ function validateForm() {
         if (password === "1234") {
             alert("BERHASIL LOGIN");
             localStorage.setItem("loginusername", username);
-            location.reload(); 
-            return false; 
+            location.reload();
+            return false;
         }
 
         alert("Username atau password salah");
         incrementLoginTry();
-        return false; 
+        return false;
     }
 }
 
@@ -50,6 +50,7 @@ window.addEventListener('load', function () {
     var loginUsernameElement = document.getElementById("loginusername");
     var loginUsernameFormElement = document.getElementById("loginusernameform");
     var loginFormsElement = document.getElementById("loginforms");
+    var loginForms2Element = document.getElementById("loginforms2");
     var limitElement = document.getElementById("limit");
     var alreadyElement = document.getElementById("already");
 
@@ -58,19 +59,24 @@ window.addEventListener('load', function () {
     console.log(localStorage.getItem("loginusername"));
 
 
-    if (loginTry >= 5) {
-        limitElement.removeAttribute("hidden");
-        loginFormsElement.setAttribute("hidden", "true");
-    } else {
-        limitElement.setAttribute("hidden", "true");
+    if (limitElement && loginFormsElement) {
+        if (loginTry >= 5) {
+            limitElement.removeAttribute("hidden");
+            loginForms2Element.setAttribute("hidden", "true");
+        } else {
+            limitElement.setAttribute("hidden", "true");
+            loginFormsElement.removeAttribute("hidden");
+        }
     }
 
-    if (!getUsername) {
-        loginFormsElement.removeAttribute("hidden");
-        alreadyElement.setAttribute("hidden", "true");
-    } else {
-        loginFormsElement.setAttribute("hidden", "true");
-        alreadyElement.removeAttribute("hidden");
+    if (alreadyElement && loginFormsElement) {
+        if (getUsername) {
+            loginFormsElement.setAttribute("hidden", "true");
+            alreadyElement.removeAttribute("hidden");
+        } else {
+            loginForms2Element.removeAttribute("hidden");
+            alreadyElement.setAttribute("hidden", "true");
+        }
     }
 });
 
