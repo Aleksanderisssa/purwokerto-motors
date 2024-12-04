@@ -1,25 +1,31 @@
 var loginTry = parseInt(localStorage.getItem("LoginTry")) || 0;
 
 function validateForm() {
-    var username = document.getElementById("username").value.trim();
-    var password = document.getElementById("password").value.trim();
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let maxAttempts = 3; // Batas maksimum percobaan
+    let attemptCount = parseInt(localStorage.getItem("attemptCount")) || 0;
 
-    if (!username || !password) {
-        alert("Username dan password belum terisi");
+    while (attemptCount < maxAttempts) {
+        // Jika username atau password kosong
+        if (!username || !password) {
+            alert("Username dan password belum terisi");
+            incrementLoginTry();
+            return false;
+        }
+
+        // Jika password benar
+        if (password === "1234") {
+            alert("BERHASIL LOGIN");
+            localStorage.setItem("loginusername", username);
+            location.reload(); 
+            return false; 
+        }
+
+        alert("Username atau password salah");
         incrementLoginTry();
-        return false;
+        return false; 
     }
-
-    if (password === "1234") {
-        alert("BERHASIL LOGIN");
-        localStorage.setItem("loginusername", username);
-        location.reload();
-        return false;
-    }
-
-    alert("Username atau password salah");
-    incrementLoginTry();
-    return false;
 }
 
 function incrementLoginTry() {
