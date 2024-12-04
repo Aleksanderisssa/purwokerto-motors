@@ -33,40 +33,45 @@
         </div>
     </nav>
 
-    <div class="container" style="display: flex; justify-content: center; align-items: center; margin-top: 75px">
-        <div class="login-container" style="margin-bottom: 75px;">
+    <div class="container"
+        style="display: flex; justify-content: center; align-items: center; margin-top: 75px; height: 100vh;">
+        <div class="login-container" style="margin-bottom: 75px; ">
             <div class="login-box" style="justify-content: center; align-items: center;">
                 <h1>Welcome Back</h1>
                 <p id="limit" class="subtitle" hidden>You have tried more than 5 times. You are blocked from logging in.
                     <a style="color:rgba(62, 137, 247, 0.8); cursor: pointer;" onclick="resetTry()">Click here</a> to
-                    reset.</p>
+                    reset.
+                </p>
                 <p id="already" class="subtitle" hidden>You have been logged in as <b id="loginusernameform"></b>, <a
                         style="color:rgba(62, 137, 247, 0.8); cursor: pointer;" onclick="logout()">Click here</a> to
                     logout.</p>
                 <div id="loginforms" hidden>
-                    <p class="subtitle">Please log in to your account</p>
-                    <form action="#" method="POST" onsubmit="return validateForm()">
-                        <div class="input-group">
-                            <label for="username">Username</label>
-                            <div class="input-with-icon">
-                                <i class="fas fa-user"></i>
-                                <input type="text" id="username" name="username" placeholder="Enter your username">
+                    <div id="loginforms2" hidden>
+                        <p class="subtitle">Please log in to your account</p>
+                        <form action="#" method="POST" onsubmit="return validateForm()">
+                            <div class="input-group">
+                                <label for="username">Username</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                                </div>
                             </div>
-                        </div>
-                        <div class="input-group">
-                            <label for="password">Password</label>
-                            <div class="input-with-icon">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" id="password" name="password" placeholder="Enter your password">
-                            </div>
+                            <div class="input-group">
+                                <label for="password">Password</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" name="password"
+                                        placeholder="Enter your password">
+                                </div>
 
-                        </div>
-                        <div style="margin-top: 24px; margin-bottom: 24px;">
-                            <input type="submit" class="btn" value="Login">
-                        </div>
-                        <p class="signup-link">New here? <a href="#">Create an account</a></p>
+                            </div>
+                            <div style="margin-top: 24px; margin-bottom: 24px;">
+                                <input type="submit" class="btn" value="Login">
+                            </div>
+                            <p class="signup-link">New here? <a href="#">Create an account</a></p>
+                        </form>
+                    </div>
                 </div>
-                </form>
             </div>
         </div>
     </div>
