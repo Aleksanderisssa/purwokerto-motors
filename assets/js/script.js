@@ -3,18 +3,16 @@ var loginTry = parseInt(localStorage.getItem("LoginTry")) || 0;
 function validateForm() {
     let username = document.getElementById("username").value.trim();
     let password = document.getElementById("password").value.trim();
-    let maxAttempts = 3; // Batas maksimum percobaan
+    let maxAttempts = 3; 
     let attemptCount = parseInt(localStorage.getItem("attemptCount")) || 0;
 
     while (attemptCount < maxAttempts) {
-        // Jika username atau password kosong
         if (!username || !password) {
             alert("Username dan password belum terisi");
             incrementLoginTry();
             return false;
         }
 
-        // Jika password benar
         if (password === "1234") {
             alert("BERHASIL LOGIN");
             localStorage.setItem("loginusername", username);
@@ -60,7 +58,7 @@ window.addEventListener('load', function () {
 
 
     if (limitElement && loginFormsElement) {
-        if (loginTry >= 5) {
+        if (loginTry >= 3) {
             limitElement.removeAttribute("hidden");
             loginForms2Element.setAttribute("hidden", "true");
         } else {
