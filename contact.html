@@ -33,29 +33,34 @@
         </div>
     </nav>
 
-    <div class="container" style="display: flex; justify-content: center; align-items: center; margin-top: 75px">
-        <div class="contact-form-container">
-            <div class="container">
-                <h1><i class="fas fa-envelope"></i> Contact Us</h1>
-                <form id="contactForm">
-                    <div class="form-group"> <label for="fullName"><i class="fas fa-user"></i> Full Name</label> <input
-                            type="text" id="fullName" name="fullName" required=""> </div>
-                    <div class="form-group"> <label for="phoneNumber"><i class="fas fa-phone"></i> Phone Number</label>
-                        <input type="tel" id="phoneNumber" name="phoneNumber" required="">
-                    </div>
-                    <div class="form-group"> <label for="department"><i class="fas fa-briefcase"></i> Department</label>
-                        <select id="department" name="department" required="">
-                            <option value="">Select Department</option>
-                            <option value="sales">Sales</option>
-                            <option value="technicalSupport">Technical Support</option>
-                        </select>
-                    </div>
-                    <div class="form-group"> <label for="message"><i class="fas fa-comment"></i> Message</label>
-                        <textarea id="message" name="message" rows="5" required=""></textarea>
-                    </div> <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
-                </form>
-            </div>
+    <div class="container"
+        style="display: flex; justify-content: center; align-items: center; margin-top: 75px; margin-bottom: 100px;">
+        <div class="contact-container">
+            <form class="contact-form" action="login.html" method="post">
+                <h1>Contact Us</h1>
+                <div class="contact-form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="contact-form-group">
+                    <label for="phone">Nomor Telepon</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon Anda" required>
+                </div>
+                <div class="contact-form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="sales">Sales</option>
+                        <option value="technical">Technical</option>
+                    </select>
+                </div>
+                <div class="contact-form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tulis pesan Anda..." required></textarea>
+                </div>
+                <button type="submit" class="contact-submit-btn">Kirim</button>
+            </form>
         </div>
+
     </div>
     <footer class="footer">
         <div class="footer-container">
@@ -66,34 +71,25 @@
                     No. 123 Purwokerto <br><br>
                 </address>
                 <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/continental.garagee/#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/continental.garagee/#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/continental.garagee/#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/continental.garagee/#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/continental.garagee/#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
             <div class="footer-section">
                 <h3>Support</h3>
                 <ul>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#returns">Shopping & Returns</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="buildandprice.html">Shopping & Returns</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Shop</h3>
                 <ul>
-                    <li><a href="#sparepart-motor">Sparepart Motor</a></li>
-                    <li><a href="#sparepart-mobil">Sparepart Mobil</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>AutoAce</h3>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#login">Login</a></li>
+                    <li><a href="cargear.html">Sparepart Motor</a></li>
+                    <li><a href="cargear.html">Sparepart Mobil</a></li>
                 </ul>
             </div>
         </div>
