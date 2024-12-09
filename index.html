@@ -25,7 +25,7 @@
         </div>
 
         <div class="navbar-right">
-            <a href="#" class="search-icon" aria-label="Cart">
+            <a href="login.html" class="search-icon" aria-label="Cart">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
             <span class="divider" aria-hidden="true"></span>
@@ -143,6 +143,14 @@
         document.getElementById('buildandprice').addEventListener('click', function () {
             window.location.href = 'buildandprice.html';
         });
+
+        const orderButtons = document.querySelectorAll('.order-button');
+        orderButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                window.location.href = 'buildandprice.html';
+            });
+        });
+
     </script>
 </body>
 
