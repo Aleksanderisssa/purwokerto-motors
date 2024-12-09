@@ -42,7 +42,7 @@ function logout() {
     resetTry();
 }
 
-// Runs when the window loads
+
 window.addEventListener('load', function () {
     var getUsername = localStorage.getItem('loginusername');
     var loginUsernameElement = document.getElementById("loginusername");
@@ -100,5 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
             let currentValue = parseInt(inputField.value, 10);
             inputField.value = currentValue + 1;
         });
+    });
+});
+
+const searchIcons = document.querySelectorAll('.search-icon');
+searchIcons.forEach(icon => {
+    icon.addEventListener('click', (event) => {
+        event.preventDefault(); 
+        window.location.href = 'search.html';
     });
 });
